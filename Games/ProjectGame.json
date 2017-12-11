@@ -175,7 +175,7 @@
     }, {
     "room11": {
       "alias": "Blacksmith",
-      "description": "  The smithee looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
+      "description": "  The smithee before you looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
       "contextualHelp": "",
       "actions": {
         "take sword": "The rusty sword slips easily into your pocket in its entirety.  'It sure is weird that I can carry so much crap,' you think to yourself."
@@ -197,20 +197,17 @@
       "enemies": null
     }, {
     "room12": {
-      "alias": "Blacksmith",
-      "description": "  The smithee looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
+      "alias": "Mine",
+      "description": "  You enter the mineshaft, pushing down the feeling of suffocation.  You enter an open room, and through the kicked up coal dust you see a pickaxe resting against a pile of rubble and a faint light through a tunnel off to the north.",
       "contextualHelp": "",
       "actions": {
-        "take sword": "The rusty sword slips easily into your pocket in its entirety.  'It sure is weird that I can carry so much crap,' you think to yourself."
-      ,
-        "use grindstone": "Even sans an extensive knowledge of the art of smithing, you feel satisfied at the edge you have coaxed out of the pitted axe blade."
+        "take pickaxe": "Unable to stick the stout head of the pickaxe into your pocket like everything else, it takes residence in your waistband.  The splinters are disagreeable, but you persevere."
       },
       "exits": {
-        "north": "room10",
-        "east": "-1",
+        "north": "room13",
+        "east": "room10",
         "south": "-1",
-        "west": "-1",
-        "leave": "room10",
+        "west": "-1"
       },
       "objects": {
         "sword": {
