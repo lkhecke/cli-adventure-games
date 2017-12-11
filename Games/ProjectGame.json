@@ -91,8 +91,7 @@
         "east": "-1",
         "south": "-1",
         "west": "room7",
-        "climb up": "room8",
-        "climb down": "-1"
+        "climb up": "room8"
       },
       "objects": {
         "rod": {
@@ -113,7 +112,8 @@
         "north": "-1",
         "east": "room6",
         "south": "-1",
-        "west": "-1"
+        "west": "-1",
+
       },
       "objects": null,
       "enemies": null
@@ -154,12 +154,9 @@
         "south": "-1",
         "west": "-1"
       },
-      "objects": {
-        "dull axe": {
-          "actions": null
-        }
-      },
-      "enemies": null
+      "objects": null,
+      "actions": null,
+      "enemies" : null
     }
   }, {
     "room10": {
