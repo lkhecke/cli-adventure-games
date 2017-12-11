@@ -422,14 +422,13 @@
       "objects": null,
       "enemies": {
         "rabbit": {
-          "actions": [{
+          "actions": {
             "throw": {
               "meat": "You have distracted the rabbit as it chows down on the aunt bertha meat.  You run past to the next room",
               "room": "room25"
-            }
-          },{
+            },
             "kill": "The rabbit kills you.  Did you really think this was a normal rabbit?"
-            }]
+          }
         }
       }
     }
