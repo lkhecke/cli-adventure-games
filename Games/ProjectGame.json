@@ -172,6 +172,29 @@
       },
       "objects": null,
       "enemies": null
+    },
+    "room11": {
+      "alias": "Blacksmith",
+      "description": "  The smithee looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
+      "contextualHelp": "",
+      "actions": {
+        "take sword": "The rusty sword slips easily into your pocket in its entirety.  'It sure is weird that I can carry so much crap,' you think to yourself."
+      ,
+        "use grindstone": "Even sans an extensive knowledge of the art of smithing, you feel satisfied at the edge you have coaxed out of the pitted axe blade."
+      },
+      "exits": {
+        "north": "room10",
+        "east": "-1",
+        "south": "-1",
+        "west": "-1",
+        "leave": "room10",
+      },
+      "objects": {
+        "sword": {
+          "actions": null
+        }
+      },
+      "enemies": null
     }
   }]
 }
