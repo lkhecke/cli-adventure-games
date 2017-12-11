@@ -142,12 +142,12 @@
   }, {
     "room9": {
       "alias": "forest gate",
-      "description": "There is a guard guarding the gate he asks you what is 5 + 5 x 5 + 5 x 5/5?",
+      "description": "There is a guard guarding the gate he asks you what is 5 + 5 x 5 + 5 x 5/5? (type 'answer' followed by your answer)",
       "contextualHelp": "Learn Math, and answer correctly, or else.",
       "actions": {
         "question": {
-        "answer ": "40",
-         "room": "room10"
+          "answer": "40",
+           "room": "room10"
         }
       },
       "exits": {
@@ -157,7 +157,6 @@
         "west": "-1"
       },
       "objects": null,
-      "actions": null,
       "enemies" : null
     }
   }, {
