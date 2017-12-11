@@ -112,8 +112,6 @@ Game.prototype.executer = function(room) {
   delete _r.objects;
   delete _r.enemies;
 
-  console.log(_r);
-
   self.currentRoom = room;
 
   if ((_r.isExitRoom && _r.isExitRoom.toString()) === "true") {

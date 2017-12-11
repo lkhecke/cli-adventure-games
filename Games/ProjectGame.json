@@ -112,8 +112,7 @@
         "north": "-1",
         "east": "room6",
         "south": "-1",
-        "west": "-1",
-
+        "west": "-1"
       },
       "objects": null,
       "enemies": null
@@ -191,7 +190,7 @@
         "east": "-1",
         "south": "-1",
         "west": "-1",
-        "leave": "room10",
+        "leave": "room10"
       },
       "objects": {
         "sword": {
@@ -228,7 +227,7 @@
       "east": "-1",
       "south": "room12",
       "west": "-1",
-      "enter house": "room14",
+      "enter house": "room14"
     },
     "objects": null,
     "enemies": null
@@ -288,7 +287,7 @@
       },
       "objects": {
         "polished stone": null,
-        "Rope": null,
+        "Rope": null
       },
       "enemies": null
     }
@@ -451,7 +450,5 @@
       "objects": null,
       "enemies": null
     }
-  }]
-}
   }]
 }
