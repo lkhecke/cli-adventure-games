@@ -78,8 +78,7 @@
       "south": "-1",
       "west": "-1"
     },
-    "objects": {
-      "dull axe": {
+    "objects": null,
         "actions": null
       }
     },
