@@ -17,7 +17,7 @@ var gameData =  [];
 gameScripts.forEach(function(p){
     var p = __dirname+'/../Games/'+p;
     var f = JSON.parse(fs.readFileSync(p, 'UTF-8'));
-    
+
     gameData.push({
         name : f.name + " - "+ f.meta.tagline,
         value : p
@@ -30,7 +30,7 @@ inquirer.prompt(
         name: "game",
         message: "Which Adventure would you like to go for?",
         choices: gameData
-    }],
+    }]).then(
     function(answers) {
         var Game = require(__dirname+'/../src/Game');
         Game.play(answers.game);
