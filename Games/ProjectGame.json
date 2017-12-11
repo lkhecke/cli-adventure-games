@@ -146,7 +146,7 @@
       "contextualHelp": "Learn Math, and answer correctly, or else.",
       "actions": {
         "question": {
-          "answer": "40",
+          "answer": "35",
            "room": "room10"
         }
       },
@@ -249,9 +249,9 @@
     "leave house": "room13"
   },
   "objects": {
-    "sword": {
-      "actions": null
-    }
+    "meat": "It strangely smells a bit like Aunt Bertha, but you add it to your pocket regardless.  'If I get unbearably hungry...maybe.''",
+    "carrot":"Might come in handy.  Who knows?",
+    "lettuce": "With everything else you're holding, you realize that somehow storing a head of lettuce is the least of your worries.  The lettuce fits snugly into your pocket." 
   },
   "enemies": null
 }
@@ -387,7 +387,7 @@
         "west": "-1"
       },
       "objects": {
-        "sturdy board": "this giant plank might come in handy.  Good thing it fits in my pocket!"
+        "plank": "this giant plank might come in handy.  Good thing it fits in my pocket!"
       },
       "enemies": null
     }
@@ -402,7 +402,7 @@
         "east": "room21",
         "south": "-1",
         "west": "-1",
-        "use plank": "room24"
+        "plank": "room24"
       },
       "objects": null,
       "enemies": null
