@@ -172,10 +172,17 @@
       },
       "objects": null,
       "enemies": null
+<<<<<<< HEAD
     }, {
     "room11": {
       "alias": "Blacksmith",
       "description": "  The smithee before you looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
+=======
+    },
+    "room11": {
+      "alias": "Blacksmith",
+      "description": "  The smithee looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
+>>>>>>> d1e3ac348fd57f761b050ca42cf9c11d262368f9
       "contextualHelp": "",
       "actions": {
         "take sword": "The rusty sword slips easily into your pocket in its entirety.  'It sure is weird that I can carry so much crap,' you think to yourself."
@@ -195,6 +202,7 @@
         }
       },
       "enemies": null
+<<<<<<< HEAD
     }, {
     "room12": {
       "alias": "Mine",
@@ -215,6 +223,8 @@
         }
       },
       "enemies": null
+=======
+>>>>>>> d1e3ac348fd57f761b050ca42cf9c11d262368f9
     }
   }]
 }
