@@ -1,1 +1,93 @@
-
+{
+  "name": "",
+  "meta": {
+    "author": "",
+    "email": " ",
+    "tagline": "",
+    "welcome": ""
+  },
+  "rooms": [{
+    "room1": {
+      "alias": "Start Gate/Forest Clearing 1",
+      "description": " ",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "room2",
+        "south": "-1",
+        "west": "room17",
+        "climb up": "-1",
+        "climb down": "-1"
+      },
+      "objects": null,
+      "enemies": null
+    },
+    "room2": {
+      "alias": "Clearing 2",
+      "description": " ",
+      "contextualHelp": "",
+      "actions": {
+        "get sticks": "The door is shut"
+      },
+      "exits": {
+        "north": "-1",
+        "east": "room3",
+        "south": "room18",
+        "west": "room1",
+        "climb up": "-1",
+        "climb down": "-1"
+      },
+      "objects": null,
+      "enemies": null
+    },
+    "room3": {
+      "alias": "Cliff",
+      "description": " ",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "-1",
+        "south": "-1",
+        "west": "room2",
+        "climb up": "-1",
+        "climb down": "room4"
+      },
+      "objects": null,
+      "enemies": null
+    },
+    "room4": {
+      "alias": "River Bank 1",
+      "description": " ",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "-1",
+        "south": "room6",
+        "west": "-1",
+        "climb up": "room3",
+        "climb down": "-1"
+      },
+      "objects": null,
+      "enemies": null
+    },
+    "room11": {
+      "alias": "Bridge",
+      "description": " ",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "-1",
+        "south": "-1",
+        "west": "-1",
+        "climb up": "-1",
+        "climb down": "-1"
+      },
+      "objects": null,
+      "enemies": null
+    }
+  }]
+}
