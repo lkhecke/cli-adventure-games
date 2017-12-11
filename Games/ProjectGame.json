@@ -172,17 +172,10 @@
       },
       "objects": null,
       "enemies": null
-<<<<<<< HEAD
-    }, {
-    "room11": {
-      "alias": "Blacksmith",
-      "description": "  The smithee before you looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
-=======
-    },
+    }, 
     "room11": {
       "alias": "Blacksmith",
       "description": "  The smithee looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
->>>>>>> d1e3ac348fd57f761b050ca42cf9c11d262368f9
       "contextualHelp": "",
       "actions": {
         "take sword": "The rusty sword slips easily into your pocket in its entirety.  'It sure is weird that I can carry so much crap,' you think to yourself."
@@ -202,7 +195,6 @@
         }
       },
       "enemies": null
-<<<<<<< HEAD
     }, {
     "room12": {
       "alias": "Mine",
@@ -223,8 +215,176 @@
         }
       },
       "enemies": null
-=======
->>>>>>> d1e3ac348fd57f761b050ca42cf9c11d262368f9
+    },
+            {
+    "room16": {
+      "alias": "Inside Hut",
+      "description": "You Enter the Old hut.  The air is stale and there is not much around except for a polished stone and Some Rope.  You are anxious to leave.",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "-1",
+        "south": "-1",
+        "west": "-1",
+        "leave": "room15"
+      },
+      "objects": null,
+      "enemies": null
     }
+  }, {
+    "room17": {
+      "alias": "Forest Crossroads",
+      "description": "An interesting Four-Way Crossroads lays before you.  The paths lead in all four cardinal directions.",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "room1",
+        "east": "room18",
+        "south": "room15",
+        "west": "room20"
+      },
+      "objects": {
+        "bottle": {
+          "actions": null
+        }
+      },
+      "enemies": null
+    }
+  }, {
+    "room18": {
+      "alias": "Clearing With Abandoned House",
+      "description": "After cutting down the trees, you come across a clearing with a house in the corner.  There is a path north and a path back west.  Upon closer inspection, you find the house wide open, but in a state of disrepair.  You are apprehensize about entering, but then remember that the last time you raided a house, you found all sorts of goodies, and only a minor owl infestation.  You could enter this house...",
+      "contextualHelp": "",
+      "actions": {
+        "pick sword": ""
+      },
+      "exits": {
+        "north": "room2",
+        "east": "-1",
+        "south": "-1",
+        "west": "room17",
+        "enter": "room19"
+      },
+      "objects": {
+        "sword": {
+          "actions": null
+        }
+      },
+      "enemies": null
+    }
+  }, {
+    "room19": {
+      "alias": "Inside Abandoned House",
+      "description": "You have entered the house, and to your relief there does not seem to be any owls.  You look around, but nearly soil yourself when you see someone looking at you.  You are taken aback, but then you see the truth.  The body is dead, and in its clutch is some sort of small magic box, upon which is an image of an apple with a bite taken out, and the words 4s written below it.  You are confused by this thing.  You consider prying the small metal box from the corpse's grip...",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "-1",
+        "south": "-1",
+        "west": "-1",
+        "leave":"room18"
+      },
+      "objects": null,
+      "enemies": null
+    }
+  }, {
+    "room20": {
+      "alias": "Cave Entrance",
+      "description": "You come across a cave opening, but it is blocked by rocks.  You could go back east, or you could break up the rocks, but with what splintery tool?...",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "room17",
+        "south": "-1",
+        "west": "room21"
+      },
+      "objects": null,
+      "enemies": null
+    }
+  }, {
+    "room21": {
+      "alias": "Cave Cavern",
+      "description": "You find a large opening in the cave, with a few paths around.  You could go back east, head south or west. It seems like a warm draft comes from the southern path.",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "room20",
+        "south": "room22",
+        "west": "room23"
+      },
+      "objects": null,
+      "enemies": null
+    }
+  }, {
+    "room22": {
+      "alias": "Cave Bed",
+      "description": "A large opening, with hay all over the floor, almost like something has been sleeping here for a while.  It seems warm, but you don't have time for a nap.  There is also a large, sturdy wooden plank on the floor.  The only exit is back the way you came, to the north.",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "room21",
+        "east": "-1",
+        "south": "-1",
+        "west": "-1"
+      },
+      "objects": null,
+      "enemies": null
+    }
+  }, {
+    "room23": {
+      "alias": "Fissure",
+      "description": "A large fissure has opened up in the groud.  You could try jumping, but you are weighed down by all your stuff, and you doubt you could make it anyways on your bad knees and beer loving body.  You could lay something across the expanse that you could walk over...or you could turn back, but you've come this far aleady!",
+      "contextualHelp": "",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "room21",
+        "south": "-1",
+        "west": "room24"
+      },
+      "objects": null,
+      "enemies": null
+    }
+  }, {
+    "room24": {
+      "alias": "Rabbit's Gate",
+      "description": "You find, what appears to be near the end of the cave, a small opening.  You attempt to approach, but a small, innocent-looking rabbit blocks your way.  you try to get around the animal, but it is a persistant little fuzzball, and you can't get by.  How would you get by?  You could always try to kill the rabbit, but you could also try distracting the rabbit by throwing some food.  What to do...",
+      "contextualHelp":"",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "room23",
+        "south": "-1",
+        "west": "room25"
+      },
+      "objects": null,
+      "enemies": {
+        "Rabbit": {
+          "action":
+        }
+      }
+    }
+  }, {
+    "room25": {
+      "alias": "Treasure Room",
+      "description": "Having run past the rabbit, you come across the final room of the cave.  What??!! There is the treasure you have been searching for!  Why would it be here?  Oh well.  You rush for the treausure. But there is a body slumped next to the chest!  And it reeks of Elderberries.  You look a little closer, and you see something written on the wall.  Is that blood? You shine the light from your magic box at the wall, and it reads 'Do NOT feed the rabbit.  It will want more...' You feel a cold chill run down your spine, and as you turn your head, you see small, beady red eyes leering at you.  You reach for your sword.  Time for a showdown!",
+      "contextualHelp": "",
+      "actions": null,
+      "isExitRoom" : "true",
+      "exits": {
+        "north": "-1",
+        "east": "-1",
+        "south": "-1",
+        "west": "-1"
+      },
+      "objects": null,
+      "enemies": null
+    }
+  }]
+}
   }]
 }
