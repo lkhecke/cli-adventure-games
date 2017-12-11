@@ -175,10 +175,6 @@
     }, {
     "room11": {
       "alias": "Blacksmith",
-      "description": "  The smithee before you looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
-    },
-    "room11": {
-      "alias": "Blacksmith",
       "description": "  The smithee looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
       "contextualHelp": "",
       "actions": {
@@ -281,8 +277,7 @@
     }
   },
   "enemies": null
-},
-            {
+},{
     "room16": {
       "alias": "Inside Hut",
       "description": "You Enter the Old hut.  The air is stale and there is not much around except for a polished stone and Some Rope.  You are anxious to leave.",
