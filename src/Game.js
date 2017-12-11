@@ -8,7 +8,8 @@ function Game() {
   this.inventory = {};
   this.score = 0;
   this.currentRoom = {};
-  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing'];
+  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing', 'jump', 'answer', 'kill'];
+  this.alive = true;
 }
 
 Game.prototype.play = function(gsPath) { //Game Script Path
@@ -60,6 +61,10 @@ Game.prototype.executer = function(room) {
 
   _r.actions = {};
 
+  if (!self.alive) {
+    return false;
+  }
+
 
   Object.keys(room).forEach(function(k, v) {
     _r = room[k];
@@ -78,7 +83,7 @@ Game.prototype.executer = function(room) {
 
   if (_r.actions) {
     Object.keys(_r.actions).forEach(function(k, v) {
-      _r.actions[k] = _r.actions[k];
+      _r[k] = _r.actions[k];
     });
   }
 
@@ -100,11 +105,14 @@ Game.prototype.executer = function(room) {
     });
   }
 
+
   // cleanup unused vars
   delete _r.exits;
   delete _r.actions;
   delete _r.objects;
   delete _r.enemies;
+
+  console.log(_r);
 
   self.currentRoom = room;
 
@@ -199,7 +207,21 @@ Game.prototype.processKeyword = function(response, room, _r) {
   } else if (response.split(" ")[0] == 'pick' || response.split(" ")[0] == 'take'|| response.split(" ")[0] == 'get') {
     self.pick(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'throw' || response.split(" ")[0] == 'drop') {
-    self.throw(_r, response.split(" ")[1]);
+    var currentRoom = self.throw(_r, response.split(" ")[1]);
+    if (currentRoom) {
+      this.executer(currentRoom);
+      return;
+    }
+  } else if (response == 'jump') {
+    self.jump(_r);
+  } else if (response.split(" ")[0] == 'kill'){
+    self.kill(_r, response.split(" ")[1]);
+  } else if (response.split(" ")[0] == 'answer') {
+    var currentRoom = self.answer(_r, response.split(" ")[1]);
+    if (currentRoom) {
+      this.executer(currentRoom);
+      return;
+    }
   } else {
     if (response.split(" ").length < 1 || response.split(" ").length > 1) {
       console.log('Enter a verb and a action. Enter `help` for more info');
@@ -212,6 +234,7 @@ Game.prototype.processKeyword = function(response, room, _r) {
 
 Game.prototype.pick = function(room, item) {
   var self = this;
+  console.log(room[item]);
   if (room[item]) {
     self.inventory[item] = room[item];
     console.log(c.green('  Added ' + item + ' to inventory'));
@@ -223,14 +246,68 @@ Game.prototype.pick = function(room, item) {
 Game.prototype.throw = function(room, item) {
   var self = this,
     iv = self.inventory;
-  console.log(item, iv[item])
+  console.log(item, iv[item]);
   if (iv[item]) {
     delete iv[item];
     console.log('  Updated inventory');
+
+    if (room['rabbit'] && item == 'meat') {
+      console.log(room['rabbit']['actions']['throw']['meat']);
+      for (i in this.rooms) {
+        if (Object.keys(this.rooms[i])[0] == room['rabbit']['actions']['throw']['room']) {
+          var currentRoom = this.rooms[i];
+          break;
+        }
+      }
+      return currentRoom;
+    }
   } else {
     console.log(c.red('  I can\'t find any ' + item + ' in the inventory'));
   }
 };
+
+Game.prototype.jump = function(room){
+  if(room['jump']) {
+    console.log(room['jump']);
+    this.alive = false;
+  } else {
+    console.log('Weeee');
+  }
+}
+
+Game.prototype.answer = function(room, response){
+  if(room['question']){
+    if (response == room['question']['answer']) {
+      for (i in this.rooms) {
+        if (Object.keys(this.rooms[i])[0] == room['question']['room']) {
+          var currentRoom = this.rooms[i];
+          break;
+        }
+      }
+      return currentRoom;
+    } else {
+      console.log('Wrong. You die!');
+      this.alive = false;
+    }
+  } else {
+    console.log('Did I ask you anything?');
+  }
+}
+
+Game.prototype.kill = function(room, response){
+  if(!room[response]) {
+    console.log(`There is no ${response} in here`);
+  } else if (!this.inventory['sword']) {
+    console.log('You can\'t kill without a sword');
+  } else {
+    if(room[response]['actions']['kill']) {
+      console.log(room[response]['actions']['kill']);
+      this.alive = false;
+    } else {
+      console.log('You can\'t kill this');
+    }
+  }
+}
 
 Game.prototype.printInventory = function() {
   var self = this;
