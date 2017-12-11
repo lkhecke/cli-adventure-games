@@ -172,17 +172,10 @@
       },
       "objects": null,
       "enemies": null
-<<<<<<< HEAD
     }, {
     "room11": {
       "alias": "Blacksmith",
       "description": "  The smithee before you looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
-=======
-    },
-    "room11": {
-      "alias": "Blacksmith",
-      "description": "  The smithee looks long abandoned, with the coals buried in cold ash. You find a grindstone in the corner and a sword lying against a broken anvil.",
->>>>>>> d1e3ac348fd57f761b050ca42cf9c11d262368f9
       "contextualHelp": "",
       "actions": {
         "take sword": "The rusty sword slips easily into your pocket in its entirety.  'It sure is weird that I can carry so much crap,' you think to yourself."
@@ -202,7 +195,6 @@
         }
       },
       "enemies": null
-<<<<<<< HEAD
     }, {
     "room12": {
       "alias": "Mine",
@@ -223,8 +215,68 @@
         }
       },
       "enemies": null
-=======
->>>>>>> d1e3ac348fd57f761b050ca42cf9c11d262368f9
     }
-  }]
+  }, {
+  "room13": {
+    "alias": "Clearing",
+    "description": "  You enter a warm clearing, with a well-kept cottage to the south.  To the east leads down a long path with evenly spaced trees, which at some point in the distance merges with the vast forest.",
+    "contextualHelp": "",
+    "actions": {
+      "take pickaxe": "Unable to stick the stout head of the pickaxe into your pocket like everything else, it takes residence in your waistband.  The splinters are disagreeable, but you persevere."
+    },
+    "exits": {
+      "north": "room15",
+      "east": "-1",
+      "south": "room12",
+      "west": "-1",
+      "enter house": "room14",
+    },
+    "objects": null,
+    "enemies": null
+  }
+}, {
+"room14": {
+  "alias": "House",
+  "description": "  The quaint dwelling is inviting, however the walls and shelves are bare and the cabinets are all opened and empty.  Someone had picked up and left.  On the table lies some foodstuffs, including a head of lettuce, a carrot, and some strange-looking cooked meat.",
+  "contextualHelp": "",
+  "actions": {
+    "take lettuce": "With everything else you're holding, you realize that somehow storing a head of lettuce is the least of your worries.  The lettuce fits snugly into your pocket.",
+    "take carrot": "Might come in handy.  Who knows?",
+    "take meat": "It strangely smells a bit like Aunt Bertha, but you add it to your pocket regardless.  'If I get unbearably hungry...maybe.''"
+  },
+  "exits": {
+    "north": "-1",
+    "east": "-1",
+    "south": "-1",
+    "west": "-1",
+    "leave house": "room13"
+  },
+  "objects": {
+    "sword": {
+      "actions": null
+    }
+  },
+  "enemies": null
+}
+},{
+"room15": {
+  "alias": "Forest Path",
+  "description": "  The path is thick with trees.  A tiny hut sits quaintly at the side of the road.",
+  "contextualHelp": "",
+  "actions": null,
+  "exits": {
+    "north": "room17",
+    "east": "-1",
+    "south": "room13",
+    "west": "-1",
+    "enter hut": "room16"
+  },
+  "objects": {
+    "sword": {
+      "actions": null
+    }
+  },
+  "enemies": null
+}
+}]
 }
