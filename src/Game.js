@@ -244,7 +244,6 @@ Game.prototype.pick = function(room, item) {
 Game.prototype.throw = function(room, item) {
   var self = this,
     iv = self.inventory;
-  console.log(item, iv[item]);
   if (iv[item]) {
     delete iv[item];
     console.log('  Updated inventory');
