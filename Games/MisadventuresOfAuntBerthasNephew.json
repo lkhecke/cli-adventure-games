@@ -1,10 +1,10 @@
 {
-  "name": "Project",
+  "name": "The Misadventures of Aunt Bertha's Nephew",
   "meta": {
-    "author": "",
+    "author": "Wade Peyou, Jack Ische, Oliver Alonzo, Matthew Mordeson",
     "email": " ",
     "tagline": "",
-    "welcome": "Hi"
+    "welcome": "Enjoy"
   },
   "rooms": [{
     "room1": {
