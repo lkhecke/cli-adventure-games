@@ -94,9 +94,7 @@
         "climb up": "room8"
       },
       "objects": {
-        "rod": {
-          "actions": null
-        }
+        "rod": "You take the fishing rod and cram it down your pant leg for storage.  Did I remember to take the hook out?"
       },
       "enemies": null
     }
