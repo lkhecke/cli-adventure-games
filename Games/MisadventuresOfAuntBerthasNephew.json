@@ -131,8 +131,8 @@
         "climb down": "room6"
       },
       "objects": {
-        "dull axe": {
-          "actions": null
+        "axe": {
+          "actions": "A dull Axe. This needs to be sharpened, but could be useful after that."
         }
       },
       "enemies": null
@@ -191,7 +191,7 @@
       },
       "objects": {
         "sword": {
-          "actions": null
+          "actions": "Remember, pointy end away from the body."
         }
       },
       "enemies": null
@@ -283,8 +283,8 @@
         "leave": "room15"
       },
       "objects": {
-        "polished stone": null,
-        "Rope": null
+        "stone": "Oh Boy a Pet Rock!",
+        "Rope": "Rope.  Could always use some rope.  Good for many things...aaand it weighs a lot.  Splendid."
       },
       "enemies": null
     }
@@ -301,9 +301,7 @@
         "west": "room20"
       },
       "objects": {
-        "bottle": {
-          "actions": null
-        }
+        "bottle": "A bottle.  Empty... Would have been nice to find a FULL bottle, but whatever."
       },
       "enemies": null
     }
