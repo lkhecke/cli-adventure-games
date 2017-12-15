@@ -1,5 +1,5 @@
 {
-  "name": "Super Maze",
+  "name": "Panda Escape",
   "meta": {
     "author": "Anurag Jain & Arvind Ravulavaru",
     "email": " *anurag91jain@gmail.com & arvind.ravulavaru@gmail.com",
@@ -53,7 +53,7 @@
   }, {
     "room3": {
       "alias": "Desert Dome",
-      "description": "You find yourself in the large domed structure. You feel hot from the scorching air inside the exhibit. On the right, you spot the zookeeper.",
+      "description": "You find yourself in the large domed structure. You feel hot from the scorching air inside the exhibit. On the right, you spot the senior zookeeper.",
       "contextualHelp": "Maybe the zookeeper saw something.",
       "actions": {
         "talk to zookeeper": "Oh heavens! I can't believe the cub escaped! What a terrible day. I lost my pocketbook and now this?!",
@@ -65,6 +65,47 @@
         "east": "-1",
         "south": "-1",
         "west": "room1"
+      },
+      "objects": null,
+      "enemies": null
+    }
+  },  {
+    "room4": {
+      "alias": "Aquarium",
+      "description": "You enter the Aquarium. You observe different variety of colorful fish and other sea creatures. You notice an unattended camera near one of the tanks.",
+      "contextualHelp": "Colorful fish everywhere...",
+      "actions": {
+        "inspect fish": "Nothing more than some boring fish.",
+        "inspect camera": "It looks like the lens is broken. Probably useless now.",
+        "pick camera": "You have picked up the camera."
+      },
+      "exits": {
+        "north": "-1",
+        "east": "-1",
+        "south": "room2",
+        "west": "room10"
+      },
+      "objects": {
+        "camera": {
+          "actions": null
+        }
+      },
+      "enemies": null
+    }
+  }, {
+    "room5": {
+      "alias": "Valley of the Gorillas",
+      "description": " You enter the Valley of the Gorillas. You observe ten gorillas inside the enclosure and a buff zookeeper in the exhibit.",
+      "contextualHelp": "Maybe the zookeeper saw something...",
+      "actions": {
+        "talk to zookeeper": "How's it going?... Missing panda? Woah, man... Dial me if you need anything.",
+        "new contact zookeeper": "Added to phone."
+      },
+      "exits": {
+        "north": "room6",
+        "east": "-1",
+        "south": "room3",
+        "west": "-1"
       },
       "objects": null,
       "enemies": null
