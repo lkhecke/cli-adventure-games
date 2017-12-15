@@ -278,11 +278,13 @@ Game.prototype.offer= function(room, response){
 };
 
 Game.prototype.passcode= function(room, response){
-   if(room.alias != 'Giraffe Encounter') {
+   if(room.alias != 'Giraffe Encounter' || room.alias != 'Rainforest Room') {
     console.log(`There is nothing to unlock here.`);
   } else {
-    if(response == '12345') {
+    if(response == '12345' && room.alias == 'Giraffe Encounter') {
       console.log('Supply closet unlocked. Inside you find a ladder and a net.');
+    } else if (response == '54321' && room.alias == 'Rainforest Room') {
+      console.log('Utilities box unlocked. Inside you see a lever to adjust the mist. You pull the lever and the mist stops. The air clears and you spot the panda!');
     } else {
       console.log('Sorry wrong passcode');
     }
