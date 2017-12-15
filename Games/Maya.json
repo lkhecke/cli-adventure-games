@@ -30,9 +30,7 @@
         "inspect": {
           "cage": "I wouldn't eat that. Looks gross.", 
           "bamboo": "Hmm....1"
-        },
-        "eat bamboo": "Hmmm...2",
-        "talk to people": "I saw the panda go that way! No, I saw the panda go over there. Actually, someone stole the cub; I saw the person run out of the zoo!"    
+        }
       },
       "exits": {
         "north": "room4",
