@@ -24,14 +24,9 @@
   }, {
     "room2": {
       "alias": "Panda Exhibit",
-      "description": "You enter the Panda Exhibit. You observe a bent cage, bamboo, a phone, and people outside the exhibit. You are surprised to find only two panda cubs in the exhibit. One is missing!",
-      "contextualHelp": "What is up with that cage?",
-      "actions": {
-        "inspect": {
-          "cage": "I wouldn't eat that. Looks gross.", 
-          "bamboo": "Hmm....1"
-        }
-      },
+      "description": "You enter the Panda Exhibit. You notice a bent cage and are surprised to find only two panda cubs in the exhibit. One is missing! You observe bamboo and a pager near the cage.",
+      "contextualHelp": "I wonder where the pandas went...",
+      "actions": null,
       "exits": {
         "north": "room4",
         "east": "room1",
@@ -43,14 +38,19 @@
           "actions": {
             "inspect": "This might be useful when searching for the panda. The cub loves to eat bamboo."
           }
-        }
+        },
+        "pager": {
+           "actions" : {
+            "inspect": "Maybe I can use this pager to make contact other people."
+           }
+        } 
       }, 
       "enemies": null
     }
   }, {
     "room3": {
       "alias": "Desert Dome",
-      "description": "You find yourself in the large domed structure. You feel hot from the scorching air inside the exhibit. On the right, you spot the senior zookeeper.",
+      "description": "You find yourself in the large domed structure. You feel hot from the scorching air inside the exhibit. On the right you spot the senior zookeeper.",
       "contextualHelp": "Maybe the zookeeper saw something.",
       "actions": {
         "talk to zookeeper": "Oh heavens! I can't believe the cub escaped! What a terrible day. I lost my pocketbook and now this?!",
@@ -71,11 +71,7 @@
       "alias": "Aquarium",
       "description": "You enter the Aquarium. You observe different variety of colorful fish and other sea creatures. You notice an unattended camera near one of the tanks.",
       "contextualHelp": "Colorful fish everywhere...",
-      "actions": {
-        "inspect fish": "Nothing more than some boring fish.",
-        "inspect camera": "It looks like the lens is broken. Probably useless now.",
-        "pick camera": "You have picked up the camera."
-      },
+      "actions": null,
       "exits": {
         "north": "-1",
         "east": "-1",
@@ -84,7 +80,9 @@
       },
       "objects": {
         "camera": {
-          "actions": null
+          "actions": {
+            "inspect": "It looks like the lens is broken. Probably useless now."
+          }  
         }
       },
       "enemies": null
@@ -92,10 +90,10 @@
   }, {
     "room5": {
       "alias": "Valley of the Gorillas",
-      "description": " You enter the Valley of the Gorillas. You observe ten gorillas inside the enclosure and a buff zookeeper in the exhibit.",
-      "contextualHelp": "Maybe the zookeeper saw something...",
+      "description": " You enter the Valley of the Gorillas. You observe ten gorillas inside the enclosure and a buff senior zookeeper in the exhibit.",
+      "contextualHelp": "Maybe the senior zookeeper saw something...",
       "actions": {
-        "talk to zookeeper": "How's it going?... Missing panda? Woah, man... Dial me if you need anything.",
+        "talk to zookeeper": "How's it going?... Missing panda? Woah, man... Let me know if you need anything.",
         "new contact zookeeper": "Added to phone."
       },
       "exits": {
@@ -105,7 +103,14 @@
         "west": "-1"
       },
       "objects": null,
-      "enemies": null
-    }
+      "enemies": 
+         "zookeeper": {
+            "actions": {
+                "talk to": "How's it going?... Missing panda? Woah, man... Let me know if you need anything.",
+                "new contact zookeeper": "Added to phone."
+            }
+          }
+        }
+      }
   }]
 }
