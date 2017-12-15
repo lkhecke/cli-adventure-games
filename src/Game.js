@@ -203,7 +203,12 @@ Game.prototype.processKeyword = function(response, room, _r) {
   } else if (response.split(" ")[0] == 'inspect'){
     self.inspect(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'talk'){
+    if (response.split(" ")[1] == 'to'){
+      self.talk(_r, response.split(" ")[2]);
+    }
+    else{
     self.talk(_r, response.split(" ")[1]);
+    }
   } else if (response.split(" ")[0] == 'offer'){
     self.offer(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'unlock'){
