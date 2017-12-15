@@ -235,7 +235,7 @@ Game.prototype.throw = function(room, item) {
 };
 
 Game.prototype.inspect = function(room, response){
-  if(!room[response]) {
+  if(!room['inspect'][response]) {
     console.log(`There is no ${response} to inspect.`);
   } else {
     if(room['inspect'][response]) {
