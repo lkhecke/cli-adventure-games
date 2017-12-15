@@ -191,7 +191,11 @@
       "alias": "Giraffe Encounter",
       "description": "You enter the Giraffe Encounter. You observe a wallet on a nearby bench and a supply closet.",
       "contextualHelp": "I wonder who that wallet belongs to.",
-      "actions": null,
+      "actions": {
+          "enter": {
+              "passcode": "12345"
+          }
+        },
       "exits": {
         "north": "room8",
         "east": "room11",
@@ -206,15 +210,19 @@
         }, 
         "closet": {
             "actions": {
-                "inspect": "Its locked. I wonder who knows the passcode...",
-                "unlock": ""
+                "inspect": "Its locked. I wonder who knows the passcode..."
             }
         },
         "ladder": {
             "actions": {
                 "inspect": "A sturdy, steel ladder. Probably for feeding the giraffes."
             }
-        }   
+        }, 
+        "net": {
+            "actions": {
+                "inspect": "A large rope net for hanging giraffe food."
+            }
+        }    
     }, 
       "enemies": null
     }
