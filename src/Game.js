@@ -8,7 +8,7 @@ function Game() {
   this.inventory = {};
   this.score = 0;
   this.currentRoom = {};
-  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing', 'inspect', 'give', 'talk', 'offer', 'unlock'];
+  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing', 'inspect', 'give', 'talk', 'offer', 'unlock', 'enter'];
 }
 
 Game.prototype.play = function(gsPath) { //Game Script Path
@@ -206,8 +206,8 @@ Game.prototype.processKeyword = function(response, room, _r) {
     self.talk(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'offer'){
     self.offer(_r, response.split(" ")[1]);
-  } else if (response.split(" ")[0] == 'unlock'){
-    self.unlock(_r, response.split(" ")[1]);
+  } else if (response.split(" ")[1] == 'enter'){
+    self.enter(_r, response.split(" ")[0]);
   } else {
     if (response.split(" ").length < 1 || response.split(" ").length > 1) {
       console.log('Enter a verb and a action. Enter `help` for more info');
@@ -276,7 +276,26 @@ Game.prototype.offer= function(room, response){
       }
    } 
 };
-  
+
+Game.prototype.enter= function(room, response){
+  if(room['enter']){
+    if (response == room['passcode']['enter']) {
+      console.log('You are in!');
+    } else {
+      console.log('Wrong passcode.');
+    }
+  } else {
+    console.log('No passcodes to enter in this room');
+  }
+};
+
+
+  if(!room[response]) {
+    console.log(`You can't unlock that.`);
+  } else if(room[response]['actions']['unlock']) {
+      console.log(room[response]['actions']['unlock']);
+   } 
+};
 
 Game.prototype.printInventory = function() {
   var self = this;
