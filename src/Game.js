@@ -272,8 +272,8 @@ Game.prototype.offer= function(room, response){
   } else if(room[response]['actions']['offer']) {
       console.log(room[response]['actions']['offer']);
       if(room == 'room3') {
-        this.pick(room, 'Supply closet code: 1234');
-        this.throw(room, response);
+        self.pick(room, 'Supply closet code: 1234');
+        self.throw(room, response);
       }
    } 
 };
