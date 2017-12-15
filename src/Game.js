@@ -278,7 +278,7 @@ Game.prototype.offer= function(room, response){
 };
 
 Game.prototype.passcode= function(room, response){
-   if(this.alias != 'Giraffe Encounter') {
+   if(room.alias != 'Giraffe Encounter') {
     console.log(`There is nothing to unlock here.`);
   } else {
     if(room[response] == '12345') {
