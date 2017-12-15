@@ -27,6 +27,9 @@
       "description": "There is a bent cage, bamboo, a phone, and people outside the exhibit. You are surprised to find only two panda cubs in the exhibit. One is missing!",
       "contextualHelp": "What is up with that cage?",
       "actions": {
+        "eat": {
+          "bamboo": "I wouldn't eat that. Looks gross."
+        },
         "inspect cage": "Wow that cage is bent. The panda cub may have escaped from here.",
         "inspect bamboo": "This might be useful when searching for the panda. The cub loves to eat bamboo.",
         "eat bamboo": "Hmmm... I wouldn't eat that.",
