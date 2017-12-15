@@ -272,8 +272,7 @@ Game.prototype.offer= function(room, response){
   } else if(room[response]['actions']['offer']) {
       console.log(room[response]['actions']['offer']);
       if(room.alias == 'Desert Dome') {
-        self.pick(room, 'Supply closet code: 1234');
-        self.throw(room, response);
+        console.log('Remember this code! The supply to the code closet is: 12345');
       }
    } 
 };
