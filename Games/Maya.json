@@ -42,7 +42,7 @@
       },
       "objects": {
         "bamboo": {
-          "actions": "eat"
+          "actions": null
         },
         "phone": {
           "actions": null
