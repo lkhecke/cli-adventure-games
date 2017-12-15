@@ -203,7 +203,11 @@ Game.prototype.processKeyword = function(response, room, _r) {
   } else if (response.split(" ")[0] == 'inspect'){
     self.inspect(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'talk'){
-    self.talkto(_r, response.split(" ")[1]);
+    self.talk(_r, response.split(" ")[1]);
+  } else if (response.split(" ")[0] == 'talk'){
+    self.request(_r, response.split(" ")[1]);
+  } else if (response.split(" ")[0] == 'talk'){
+    self.unlock(_r, response.split(" ")[1]);
   } else {
     if (response.split(" ").length < 1 || response.split(" ").length > 1) {
       console.log('Enter a verb and a action. Enter `help` for more info');
@@ -248,7 +252,7 @@ Game.prototype.inspect = function(room, response){
   }
 };
 
-Game.prototype.talkto= function(room, response){
+Game.prototype.talk= function(room, response){
   if(!room[response]) {
     console.log(`There is no ${response} to talk to.`);
   } else {
@@ -259,6 +263,24 @@ Game.prototype.talkto= function(room, response){
     }
   }
 };
+
+Game.prototype.offer= function(room, response){
+    var self = this,
+    iv = self.inventory;
+    if (!iv[response]) {
+        console.log(`You don't have this item in your inventory.`);
+    } else {
+        if(!room[response]['actions']['offer']) {
+            console.log(`There is no one here to offer this item.`);
+    } else { 
+      if(room[response]['actions']['request']) {
+        console.log(room[response]['actions']['request']);
+      } else {
+        console.log('Sorry, you canot offer that item to anyone.');
+      }
+    }
+    }
+  };
 
 Game.prototype.printInventory = function() {
   var self = this;
