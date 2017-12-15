@@ -204,9 +204,9 @@ Game.prototype.processKeyword = function(response, room, _r) {
     self.inspect(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'talk'){
     self.talk(_r, response.split(" ")[1]);
-  } else if (response.split(" ")[0] == 'talk'){
+  } else if (response.split(" ")[0] == 'offer'){
     self.offer(_r, response.split(" ")[1]);
-  } else if (response.split(" ")[0] == 'talk'){
+  } else if (response.split(" ")[0] == 'unlock'){
     self.unlock(_r, response.split(" ")[1]);
   } else {
     if (response.split(" ").length < 1 || response.split(" ").length > 1) {
