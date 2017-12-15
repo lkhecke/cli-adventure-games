@@ -1,5 +1,5 @@
 var utils = require('./utils');
-var inquirer = require('inquirer');
+var inquirer = require("inquirer");
 var Table = require('cli-table');
 
 var c = utils.colors;
@@ -8,7 +8,7 @@ function Game() {
   this.inventory = {};
   this.score = 0;
   this.currentRoom = {};
-  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing', 'eat', 'inspect', 'talk to', 'return', 'ask for'];
+  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing', 'eat', 'inspect'];
 }
 
 Game.prototype.play = function(gsPath) { //Game Script Path
