@@ -289,14 +289,6 @@ Game.prototype.enter= function(room, response){
   }
 };
 
-
-  if(!room[response]) {
-    console.log(`You can't unlock that.`);
-  } else if(room[response]['actions']['unlock']) {
-      console.log(room[response]['actions']['unlock']);
-   } 
-};
-
 Game.prototype.printInventory = function() {
   var self = this;
   var items = Object.keys(self.inventory);
