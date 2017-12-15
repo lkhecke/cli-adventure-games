@@ -277,7 +277,6 @@ Game.prototype.offer= function(room, response){
             console.log('Sorry, you canot offer that item to anyone.');
         }
      }
-    }
   };
 
 Game.prototype.printInventory = function() {
