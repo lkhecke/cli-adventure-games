@@ -239,12 +239,12 @@ Game.prototype.inspect = function(room, response){
     console.log(`There is no ${response} to inspect.`);
   } else {
     if(room[response]['actions']['inspect']) {
-      console.log(room['actions']['inspect'][response]);
+      console.log(room[response]['actions']['inspect']);
     } else {
       console.log('${response} cannot be inspected.');
     }
   }
-}
+};
 
 Game.prototype.printInventory = function() {
   var self = this;
