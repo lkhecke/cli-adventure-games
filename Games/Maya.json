@@ -47,13 +47,7 @@
           }
         }
       }, 
-      "enemies": {
-        "people": {
-          "actions": {
-            "talk to": "I saw the panda go that way! No, I saw the panda go over there. Actually, someone stole the cub; I saw the person run out of the zoo!"    
-          }
-        } 
-      }    
+      "enemies": null
     }
   }, {
     "room3": {
