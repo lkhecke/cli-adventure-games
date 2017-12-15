@@ -206,7 +206,7 @@
         }, 
         "closet": {
             "actions": {
-                "inspect": "Its locked. I wonder where the key is...",
+                "inspect": "Its locked. I wonder where to find the passcode is...",
                 "unlock": "You unlocked the supply closet. Inside you find a ladder and a net."
             }
         },
@@ -257,12 +257,12 @@
         "west": "-1"
       },
       "objects": {
-        "utilities box": {
+        "box": {
             "actions": {
                 "inspect": "It appears to be locked.",
-                "unlock": ""
+                "unlock": "You unlock the utilities box. You lower the mist level and spot the panda! Hooray!"
             }
-        }  
+        } 
     },
       "enemies": null
     } 
