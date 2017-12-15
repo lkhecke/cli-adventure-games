@@ -272,7 +272,7 @@ Game.prototype.offer= function(room, response){
   } else if(room[response]['actions']['offer']) {
       console.log(room[response]['actions']['offer']);
       if(room.alias == 'Desert Dome') {
-        self.pick(room, 'key');
+        this.pick(room, 'key');
       }
    } 
 };
