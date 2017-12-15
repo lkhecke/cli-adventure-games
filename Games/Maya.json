@@ -27,14 +27,11 @@
       "description": "There is a bent cage, bamboo, a phone, and people outside the exhibit. You are surprised to find only two panda cubs in the exhibit. One is missing!",
       "contextualHelp": "What is up with that cage?",
       "actions": {
-        "eat": {
-          "bamboo": "I wouldn't eat that. Looks gross."
+        "inspect": {
+          "cage": "I wouldn't eat that. Looks gross.", 
+          "bamboo": "This might be useful when searching for the panda. The cub loves to eat bamboo."
         },
-        "inspect cage": "Wow that cage is bent. The panda cub may have escaped from here.",
-        "inspect bamboo": "This might be useful when searching for the panda. The cub loves to eat bamboo.",
         "eat bamboo": "Hmmm... I wouldn't eat that.",
-        "pick bamboo": "You have picked up bamboo.",
-        "pick phone": "You have picked up a phone.",
         "talk to people": "I saw the panda go that way! No, I saw the panda go over there. Actually, someone stole the cub; I saw the person run out of the zoo!"    
       },
       "exits": {
