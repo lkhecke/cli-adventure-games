@@ -278,8 +278,8 @@ Game.prototype.offer= function(room, response){
 };
 
 Game.prototype.enter= function(room, response){
-  if(room['enter']){
-    if (response == room['enter']['passcode']) {
+  if(room['passcode']){
+    if (response == room['passcode']['enter']) {
       console.log('You are in!');
     } else {
       console.log('Wrong passcode.');
