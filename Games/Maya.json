@@ -204,14 +204,10 @@
                 "inspect": "It appears to belong to Morgan Freeman. Hmmm..."
             }
         }, 
-        "12345": {
-            "actions": {
-                "enter": "Its locked. I wonder who knows the passcode..."
-            }
-        },
         "closet": {
             "actions": {
-                "inspect": "Its locked. I wonder who knows the passcode..."
+                "inspect": "Its locked. I wonder where the key is..."
+                "unlock": "You unlocked the supply closet. Inside you find a ladder and a net."
             }
         },
         "ladder": {
