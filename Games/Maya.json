@@ -67,7 +67,7 @@
         }
       },
       "enemies": {
-        "head zookeeper": {
+        "zookeeper": {
            "actions": {
                "talk": "Oh heavens! I can't believe the cub escaped! What a terrible day. I lost my pocketbook and now this?!"
            }
@@ -98,7 +98,7 @@
   }, {
     "room5": {
       "alias": "Valley of the Gorillas",
-      "description": " You enter the Valley of the Gorillas. You observe ten gorillas inside the enclosure and a buff senior zookeeper in the exhibit.",
+      "description": " You enter the Valley of the Gorillas. You observe ten gorillas inside the enclosure and a buff animal curator in the exhibit.",
       "contextualHelp": "Maybe the senior zookeeper saw something...",
       "actions": null, 
       "exits": {
@@ -115,7 +115,7 @@
         }
       }, 
       "enemies": {
-         "senior zookeeper": {
+         "curator": {
             "actions": {
                 "talk": "How's it going?... Missing panda? Woah, man... Let me know if you need anything."
             }
