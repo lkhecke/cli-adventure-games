@@ -42,7 +42,9 @@
       },
       "objects": {
         "bamboo": {
-          "actions": null
+          "actions": {
+            "inspect": "Interesting bamboo...."
+          }
         },
         "phone": {
           "actions": null
