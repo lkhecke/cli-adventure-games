@@ -281,7 +281,7 @@ Game.prototype.passcode= function(room, response){
    if(room.alias != 'Giraffe Encounter') {
     console.log(`There is nothing to unlock here.`);
   } else {
-    if(room[response] == '12345') {
+    if(response == '12345') {
       console.log('Closet unlocked.');
     } else {
       console.log('Sorry wrong passcode');
