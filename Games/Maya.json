@@ -1,15 +1,15 @@
 {
   "name": "Panda Escape",
   "meta": {
-    "author": "Anurag Jain & Arvind Ravulavaru",
-    "email": " *anurag91jain@gmail.com & arvind.ravulavaru@gmail.com",
-    "tagline": "A Simple Text based Adventure game written in Javascript",
-    "welcome": "Welcome to Maya - A pilot written to test the text based adventure game engine written in Javascript. The aim of the game is to find the exit gate and leave the maze."
+    "author": "Toria Johnson, Lily Hecke, Sindhu Suresh",
+    "email": " ",
+    "tagline": "A simple text based adventure game written in Javascript",
+    "welcome": "Welcome to Panda Escape - A pilot written to test the text based adventure game engine written in Javascript. The aim of the game is to find the missing panda cub."
   },
   "rooms": [{
     "room1": {
       "alias": "Entrance",
-      "description": "You're at the entrance of the zoo. Nothing seems to be happening out here. You better go inside in the zoo. Take the west or east path. (Hint : navigate around to explore [ex: `go north`])",
+      "description": "You're at the entrance of the zoo. Nothing seems to be happening out here. You better go inside in the zoo. Take the west or east path. (Hint : navigate around to explore [ex: `go east`])",
       "contextualHelp": "I hear something in the Panda Exhibit",
       "actions": null,
       "exits": {
@@ -41,7 +41,7 @@
         },
         "pager": {
            "actions" : {
-            "inspect": "Maybe I can use this pager to make contact other people."
+            "inspect": "Who uses a pager these days?"
            }
         } 
       }, 
@@ -50,21 +50,29 @@
   }, {
     "room3": {
       "alias": "Desert Dome",
-      "description": "You find yourself in the large domed structure. You feel hot from the scorching air inside the exhibit. On the right you spot the senior zookeeper.",
-      "contextualHelp": "Maybe the zookeeper saw something.",
-      "actions": {
-        "talk to zookeeper": "Oh heavens! I can't believe the cub escaped! What a terrible day. I lost my pocketbook and now this?!",
-        "return pocketbook": "Thank you! I've been looking for this!", 
-        "ask for passcode": "Of course! Anything to retrive the missing panda cub. Here is the key."
-      },
+      "description": "You enter the Desert Dome. You feel hot from the scorching air inside the exhibit. On the right you spot the head zookeeper.",
+      "contextualHelp": "Maybe the head zookeeper saw something.",
+      "actions": null, 
       "exits": {
         "north": "room5",
         "east": "-1",
         "south": "-1",
         "west": "room1"
       },
-      "objects": null,
-      "enemies": null
+      "objects": {
+        "pocketbook": {
+            "actions": {
+                "offer": "Thank you! I had been looking for this. You know... I have a few passcodes written here that might be helpful if you need any supplies. Here is a list of a few of the passcodes."
+            }
+        }
+      },
+      "enemies": {
+        "head zookeeper": {
+           "actions": {
+               "talk": "Oh heavens! I can't believe the cub escaped! What a terrible day. I lost my pocketbook and now this?!"
+           }
+         }
+       }
     }
   },  {
     "room4": {
@@ -92,25 +100,166 @@
       "alias": "Valley of the Gorillas",
       "description": " You enter the Valley of the Gorillas. You observe ten gorillas inside the enclosure and a buff senior zookeeper in the exhibit.",
       "contextualHelp": "Maybe the senior zookeeper saw something...",
-      "actions": {
-        "talk to zookeeper": "How's it going?... Missing panda? Woah, man... Let me know if you need anything.",
-        "new contact zookeeper": "Added to phone."
-      },
+      "actions": null, 
       "exits": {
         "north": "room6",
         "east": "-1",
         "south": "room3",
         "west": "-1"
       },
-      "objects": null,
-      "enemies": {
-         "zookeeper": {
+      "objects": {
+        "pocketbook": {
             "actions": {
-                "talk": "How's it going?... Missing panda? Woah, man... Let me know if you need anything.",
-                "new contact zookeeper": "Added to phone."
+                "offer": "Thanks dude, but this is not my pocketbook."
+            }
+        }
+      }, 
+      "enemies": {
+         "senior zookeeper": {
+            "actions": {
+                "talk": "How's it going?... Missing panda? Woah, man... Let me know if you need anything."
             }
           }
         }
-      }
-  }]
+    } 
+  }, {
+    "room6": {
+      "alias": "Bear Canyon",
+      "description": "You enter Bear Canyon. You spot see brown bears, black bears, and, what is that? There is a strange figure in the middle of the enclosure. If only you could see the figure better.",
+      "contextualHelp": "Maybe something around the zoo could help you see what's in the enclosure.",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "-1",
+        "south": "room5",
+        "west": "room7"
+      },
+      "objects": null,
+      "enemies": null
+    }
+  }, {
+    "room7": {
+      "alias": "Madagascar Expedition",
+      "description": "You enter the Madagascar Expedition. Should you take a safari to look at all the animals? You spot binoculars and a map of the zoo at the front of the enclosure",
+      "contextualHelp": "I wonder when those binoculars might come in handy.",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "room6",
+        "south": "-1",
+        "west": "room11"
+      },
+      "objects": {
+        "binocular": {
+          "actions": {
+            "inspect": "Someone must have dropped these here."
+          }
+        }
+      }, 
+      "enemies": null
+    }
+  }, {
+    "room11": {
+      "alias": "Butterfly & Insect Pavilion",
+      "description": "You enter the Butterfly & Insect Pavilion.  Your distate for creepy crawlers leads you to the exit very quickly. You see a small pocketbook on the floor and a volunteer near the butterfly conservatory.",
+      "contextualHelp": "Maybe the volunteer saw something.",
+      "actions": null,
+      "exits": {
+        "north": "-1",
+        "east": "room7",
+        "south": "-1",
+        "west": "room9"
+      },
+      "objects": {
+        "pocketbook": {
+            "actions": {
+              "inspect": "Someone must have dropped this here.",
+              "offer": "How thoughtful! But that is not my pocketbook."
+            }
+          }
+      },
+      "enemies": {
+          "volunteer": {
+              "actions": {
+                "talk": "Hello, there!... My goodness! A missing panda?... I think I heard some loud noises in the Rainforest Room."
+                }
+            }    
+        }
+    }
+  }, {
+    "room9": {
+      "alias": "Giraffe Encounter",
+      "description": "You enter the Giraffe Encounter. You observe a wallet on a nearby bench and a supply closet.",
+      "contextualHelp": "I wonder who that wallet belongs to.",
+      "actions": null,
+      "exits": {
+        "north": "room8",
+        "east": "room11",
+        "south": "room10",
+        "west": "-1"
+      },
+      "objects": {
+        "wallet": {
+            "actions": {
+                "inspect": "It appears to belong to Morgan Freeman. Hmmm..."
+            }
+        }, 
+        "closet": {
+            "actions": {
+                "inspect": "Its locked. I wonder who knows the passcode...",
+                "unlock": ""
+            }
+        },
+        "ladder": {
+            "actions": {
+                "inspect": "A sturdy, steel ladder. Probably for feeding the giraffes."
+            }
+        }   
+    }, 
+      "enemies": null
+    }
+  }, { 
+    "room8": {
+      "alias": "Zoo Offices",
+      "description": "You enter the zoo's administrative offices. There is nothing spectacular about it. Just some outdated chairs. ",
+      "contextualHelp": "Maybe the zookeeper saw something.",
+      "actions": null, 
+      "exits": {
+        "north": "room5",
+        "east": "-1",
+        "south": "-1",
+        "west": "room1"
+      },
+        "objects": {
+            "chairs": {
+                "actions": {
+                    "inspect": "Nothing interesting here."
+                }
+            }  
+        }, 
+      "enemies": null
+    }
+  }, {
+    "room10": {
+      "alias": "The Rainforest Room",
+      "description": "You enter the Rainforest Room. You enter the rainforest. It is difficult to see due to a thick layer of mist. You can barely see a utilities box in the corner.",
+      "contextualHelp": "I can't see anything with this mist.",
+      "actions": null, 
+      "exits": {
+        "north": "room9",
+        "east": "room4",
+        "south": "-1",
+        "west": "-1"
+      },
+      "objects": {
+        "utilities box": {
+            "actions": {
+                "inspect": "It appears to be locked.",
+                "unlock": ""
+            }
+        }  
+    },
+      "enemies": null
+    } 
+}]
 }
