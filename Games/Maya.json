@@ -15,7 +15,7 @@
       "exits": {
         "north": "-1",
         "east": "room3",
-        "south": -1",
+        "south": "-1",
         "west": "room2"
       },
       "objects": null,
