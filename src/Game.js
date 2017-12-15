@@ -270,15 +270,13 @@ Game.prototype.offer= function(room, response){
     if (!iv[response]) {
         console.log(`You don't have this item in your inventory.`);
     } else {
-        if(!room[response]['actions']['offer']) {
+        if(room[response]['actions']['offer']) {
+          console.log(room[response]['actions']['offer'])
+        } else { 
             console.log(`There is no one here to offer this item.`);
-    } else { 
-      if(room[response]['actions']['offer']) {
-        console.log(room[response]['actions']['offer']);
-      } else {
-        console.log('Sorry, you canot offer that item to anyone.');
-      }
-    }
+            console.log('Sorry, you canot offer that item to anyone.');
+        }
+     }
     }
   };
 
