@@ -282,7 +282,7 @@ Game.prototype.passcode= function(room, response){
     console.log(`There is nothing to unlock here.`);
   } else {
     if(response == '12345') {
-      console.log('Closet unlocked.');
+      console.log('Supply closet unlocked. Inside you find a ladder and a net.');
     } else {
       console.log('Sorry wrong passcode');
     }
