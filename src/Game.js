@@ -206,8 +206,8 @@ Game.prototype.processKeyword = function(response, room, _r) {
     self.talk(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'offer'){
     self.offer(_r, response.split(" ")[1]);
-  } else if (response.split(" ")[0] == 'unlock'){
-    self.unlock(_r, response.split(" ")[1]);
+  } else if (response.split(" ")[0] == 'passcode'){
+    self.passcode(_r, response.split(" ")[1]);
   } else {
     if (response.split(" ").length < 1 || response.split(" ").length > 1) {
       console.log('Enter a verb and a action. Enter `help` for more info');
