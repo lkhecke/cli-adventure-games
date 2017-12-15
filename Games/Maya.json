@@ -30,6 +30,8 @@
         "inspect cage": "Wow that cage is bent. The panda cub may have escaped from here.",
         "inspect bamboo": "This might be useful when searching for the panda. The cub loves to eat bamboo.",
         "eat bamboo": "Hmmm... I wouldn't eat that.",
+        "pick bamboo": "You have picked up bamboo.",
+        "pick phone": "You have picked up a phone.",
         "talk to people": "I saw the panda go that way! No, I saw the panda go over there. Actually, someone stole the cub; I saw the person run out of the zoo!"    
       },
       "exits": {
@@ -43,7 +45,7 @@
           "actions": null
         },
         "bamboo": {
-          "actions": null
+          "actions":
         }
       },
       "enemies": null
