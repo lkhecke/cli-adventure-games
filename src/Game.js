@@ -271,7 +271,7 @@ Game.prototype.offer= function(room, response){
     console.log(`Hmmm... no thank you.`);
   } else if(room[response]['actions']['offer']) {
       console.log(room[response]['actions']['offer']);
-      if(room == 'room3') {
+      if(room.alias == 'Desert Dome') {
         self.pick(room, 'Supply closet code: 1234');
         self.throw(room, response);
       }
