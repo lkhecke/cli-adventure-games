@@ -103,7 +103,7 @@
         "west": "-1"
       },
       "objects": null,
-      "enemies": 
+      "enemies": {
          "zookeeper": {
             "actions": {
                 "talk to": "How's it going?... Missing panda? Woah, man... Let me know if you need anything.",
