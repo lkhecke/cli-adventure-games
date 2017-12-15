@@ -206,7 +206,7 @@
         }, 
         "closet": {
             "actions": {
-                "inspect": "Its locked. I wonder where the key is..."
+                "inspect": "Its locked. I wonder where the key is...",
                 "unlock": "You unlocked the supply closet. Inside you find a ladder and a net."
             }
         },
