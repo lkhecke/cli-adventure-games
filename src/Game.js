@@ -265,15 +265,13 @@ Game.prototype.talk= function(room, response){
 };
 
 Game.prototype.offer= function(room, response){
-  if(!room[response]) {
-    console.log(`There is no one here to offer this item.`);
-  } else {
-    if(room[response]['actions']['offer']) {
+  if (!this.inventory[response]) {
+    console.log('Sorry, you don\'t have this item in your inventory.');
+  } else if(!room[response]) {
+    console.log(`Hmmm... no thank you.`);
+  } else if(room[response]['actions']['offer']) {
       console.log(room[response]['actions']['offer']);
-    } else {
-      console.log('${response} cannot be offered.');
-    }
-  }
+  } 
 };
   
 
