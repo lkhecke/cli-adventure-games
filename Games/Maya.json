@@ -192,8 +192,8 @@
       "description": "You enter the Giraffe Encounter. You observe a wallet on a nearby bench and a supply closet.",
       "contextualHelp": "I wonder who that wallet belongs to.",
       "actions": {
-          "enter": {
-              "passcode": "12345"
+          "passcode": {
+              "enter": "12345"
           }
         },
       "exits": {
