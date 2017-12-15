@@ -238,8 +238,8 @@ Game.prototype.inspect = function(room, response){
   if(!room[response]) {
     console.log(`There is no ${response} to inspect.`);
   } else {
-    if(room[response]['actions']['inspect']) {
-      console.log(room[response]['actions']['inspect']);
+    if(room['inspect'][response]) {
+      console.log(room['inspect'][response]);
     } else {
       console.log('${response} cannot be inspected.');
     }
