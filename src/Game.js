@@ -277,16 +277,16 @@ Game.prototype.offer= function(room, response){
    } 
 };
 
-Game.prototype.unlock= function(room, response){
-  if (!this.inventory['key']) {
-    console.log('Sorry, you don\'t have the key to unlock to door.');
-  } else if(!room[response]) {
-    console.log('Nothing to unlock here.');
-  } else if(room[response]['actions']['unlock']) {
-      console.log(room[response]['actions']['unlock']);
+Game.prototype.passcode= function(room, response){
+   if(this.alias != 'Giraffe Encounter') {
+    console.log(`There is nothing to unlock here.`);
   } else {
-      console.log('${response} cannot be enter.');
+    if(room[response] == '12345') {
+      console.log('Closet unlocked.');
+    } else {
+      console.log('Sorry wrong passcode');
     }
+  }
 };
 
 Game.prototype.printInventory = function() {
