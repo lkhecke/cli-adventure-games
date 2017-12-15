@@ -24,14 +24,14 @@
   }, {
     "room2": {
       "alias": "Panda Exhibit",
-      "description": "There is a bent cage, bamboo, a phone, and people outside the exhibit. You are surprised to find only two panda cubs in the exhibit. One is missing!",
+      "description": "You enter the Panda Exhibit. You observe a bent cage, bamboo, a phone, and people outside the exhibit. You are surprised to find only two panda cubs in the exhibit. One is missing!",
       "contextualHelp": "What is up with that cage?",
       "actions": {
         "inspect": {
           "cage": "I wouldn't eat that. Looks gross.", 
-          "bamboo": "This might be useful when searching for the panda. The cub loves to eat bamboo."
+          "bamboo": "Hmm....1"
         },
-        "eat bamboo": "Hmmm... I wouldn't eat that.",
+        "eat bamboo": "Hmmm...2",
         "talk to people": "I saw the panda go that way! No, I saw the panda go over there. Actually, someone stole the cub; I saw the person run out of the zoo!"    
       },
       "exits": {
@@ -43,14 +43,17 @@
       "objects": {
         "bamboo": {
           "actions": {
-            "inspect": "Interesting bamboo...."
+            "inspect": "This might be useful when searching for the panda. The cub loves to eat bamboo."
           }
-        },
-        "phone": {
-          "actions": null
         }
-      },
-      "enemies": null
+      }, 
+      "enemies": {
+        "people": {
+          "actions": {
+            "talk to": "I saw the panda go that way! No, I saw the panda go over there. Actually, someone stole the cub; I saw the person run out of the zoo!"    
+          }
+        } 
+      }    
     }
   }, {
     "room3": {
