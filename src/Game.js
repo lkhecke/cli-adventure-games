@@ -8,7 +8,7 @@ function Game() {
   this.inventory = {};
   this.score = 0;
   this.currentRoom = {};
-  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing', 'eat', 'inspect'];
+  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing'];
 }
 
 Game.prototype.play = function(gsPath) { //Game Script Path
