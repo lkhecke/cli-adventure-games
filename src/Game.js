@@ -206,8 +206,8 @@ Game.prototype.processKeyword = function(response, room, _r) {
     self.talk(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'offer'){
     self.offer(_r, response.split(" ")[1]);
-  } else if (response.split(" ")[1] == 'enter'){
-    self.enter(_r, response.split(" ")[0]);
+  } else if (response.split(" ")[0] == 'enter'){
+    self.enter(_r, response.split(" ")[1]);
   } else {
     if (response.split(" ").length < 1 || response.split(" ").length > 1) {
       console.log('Enter a verb and a action. Enter `help` for more info');
@@ -279,7 +279,7 @@ Game.prototype.offer= function(room, response){
 
 Game.prototype.enter= function(room, response){
   if(room['enter']){
-    if (response == room['passcode']['enter']) {
+    if (response == room['enter']['passcode']) {
       console.log('You are in!');
     } else {
       console.log('Wrong passcode.');
