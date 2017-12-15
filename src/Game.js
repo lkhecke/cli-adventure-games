@@ -1,5 +1,5 @@
 var utils = require('./utils');
-var inquirer = require("inquirer");
+var inquirer = require('inquirer');
 var Table = require('cli-table');
 
 var c = utils.colors;
