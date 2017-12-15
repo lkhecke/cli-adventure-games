@@ -191,11 +191,7 @@
       "alias": "Giraffe Encounter",
       "description": "You enter the Giraffe Encounter. You observe a wallet on a nearby bench and a supply closet.",
       "contextualHelp": "I wonder who that wallet belongs to.",
-      "actions": {
-          "passcode": {
-              "enter": "12345"
-          }
-        },
+      "actions": null,
       "exits": {
         "north": "room8",
         "east": "room11",
@@ -208,6 +204,11 @@
                 "inspect": "It appears to belong to Morgan Freeman. Hmmm..."
             }
         }, 
+        "12345": {
+            "actions": {
+                "enter": "Its locked. I wonder who knows the passcode..."
+            }
+        },
         "closet": {
             "actions": {
                 "inspect": "Its locked. I wonder who knows the passcode..."
