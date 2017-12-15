@@ -8,7 +8,7 @@ function Game() {
   this.inventory = {};
   this.score = 0;
   this.currentRoom = {};
-  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing', 'inspect'];
+  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing', 'inspect', 'give', 'talk to'];
 }
 
 Game.prototype.play = function(gsPath) { //Game Script Path
@@ -198,10 +198,12 @@ Game.prototype.processKeyword = function(response, room, _r) {
     self.restore();
   } else if (response.split(" ")[0] == 'pick' || response.split(" ")[0] == 'take'|| response.split(" ")[0] == 'get') {
     self.pick(_r, response.split(" ")[1]);
-  } else if (response.split(" ")[0] == 'throw' || response.split(" ")[0] == 'drop') {
+  } else if (response.split(" ")[0] == 'throw' || response.split(" ")[0] == 'drop' || response.split(" ")[0] == 'give') {
     self.throw(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'inspect'){
     self.inspect(_r, response.split(" ")[1]);
+  } else if (response.split(" ")[0] == 'talk to'){
+    self.talkto(_r, response.split(" ")[1]);
   } else {
     if (response.split(" ").length < 1 || response.split(" ").length > 1) {
       console.log('Enter a verb and a action. Enter `help` for more info');
@@ -240,6 +242,18 @@ Game.prototype.inspect = function(room, response){
   } else {
     if(room[response]['actions']['inspect']) {
       console.log(room[response]['actions']['inspect']);
+    } else {
+      console.log('${response} cannot be inspected.');
+    }
+  }
+};
+
+Game.prototype.talkto= function(room, response){
+  if(!room[response]) {
+    console.log(`There is no ${response} to talk to.`);
+  } else {
+    if(room[response]['actions']['talk to']) {
+      console.log(room[response]['actions']['talk to']);
     } else {
       console.log('${response} cannot be inspected.');
     }
