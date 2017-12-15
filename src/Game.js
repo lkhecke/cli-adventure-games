@@ -206,8 +206,8 @@ Game.prototype.processKeyword = function(response, room, _r) {
     self.talk(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'offer'){
     self.offer(_r, response.split(" ")[1]);
-  } else if (response.split(" ")[0] == 'enter'){
-    self.enter(_r, response.split(" ")[1]);
+  } else if (response.split(" ")[0] == 'unlock'){
+    self.unlock(_r, response.split(" ")[1]);
   } else {
     if (response.split(" ").length < 1 || response.split(" ").length > 1) {
       console.log('Enter a verb and a action. Enter `help` for more info');
@@ -272,21 +272,21 @@ Game.prototype.offer= function(room, response){
   } else if(room[response]['actions']['offer']) {
       console.log(room[response]['actions']['offer']);
       if(room.alias == 'Desert Dome') {
-        console.log('Remember this code! The supply to the code closet is: 12345');
+        self.pick(room, 'key');
       }
    } 
 };
 
-Game.prototype.enter= function(room, response){
-  if(!room[response]) {
-    console.log(`There is nowhere to enter a passcode.`);
+Game.prototype.unlock= function(room, response){
+  if (!this.inventory['key']) {
+    console.log('Sorry, you don\'t have the key to unlock to door.');
+  } else if(!room[response]) {
+    console.log('Nothing to unlock here.');
+  } else if(room[response]['actions']['unlock']) {
+      console.log(room[response]['actions']['unlock']);
   } else {
-    if(room[response]['actions']['enter']) {
-      console.log(room[response]['actions']['enter']);
-    } else {
       console.log('${response} cannot be enter.');
     }
-  }
 };
 
 Game.prototype.printInventory = function() {
