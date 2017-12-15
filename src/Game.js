@@ -271,7 +271,11 @@ Game.prototype.offer= function(room, response){
     console.log(`Hmmm... no thank you.`);
   } else if(room[response]['actions']['offer']) {
       console.log(room[response]['actions']['offer']);
-  } 
+      if(room == 'room3') {
+        self.pick(room, response);
+        self.throw(room, 'pocketbook');
+      }
+   } 
 };
   
 
