@@ -8,7 +8,7 @@ function Game() {
   this.inventory = {};
   this.score = 0;
   this.currentRoom = {};
-  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing', 'inspect', 'give', 'talk', 'offer', 'unlock', 'passcode'];
+  this.keyWords = ['help', 'info', 'inventory', 'score', 'save', 'restore', 'throw', 'drop', 'take', 'pick', 'get', 'use', 'move', 'nothing', 'inspect', 'give', 'talkto', 'offer', 'passcode'];
 }
 
 Game.prototype.play = function(gsPath) { //Game Script Path
@@ -202,8 +202,8 @@ Game.prototype.processKeyword = function(response, room, _r) {
     self.throw(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'inspect'){
     self.inspect(_r, response.split(" ")[1]);
-  } else if (response.split(" ")[0] == 'talk'){
-    self.talk(_r, response.split(" ")[1]);
+  } else if (response.split(" ")[0] == 'talkto'){
+    self.talkto(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'offer'){
     self.offer(_r, response.split(" ")[1]);
   } else if (response.split(" ")[0] == 'passcode'){
@@ -252,7 +252,7 @@ Game.prototype.inspect = function(room, response){
   }
 };
 
-Game.prototype.talk= function(room, response){
+Game.prototype.talkto= function(room, response){
   if(!room[response]) {
     console.log(`There is no ${response} to talk to.`);
   } else {
@@ -272,7 +272,7 @@ Game.prototype.offer= function(room, response){
   } else if(room[response]['actions']['offer']) {
       console.log(room[response]['actions']['offer']);
       if(room.alias == 'Desert Dome') {
-        this.inventory[item] = 'key';
+        console.log('SUPPLY CLOSET CODE: 12345, ????: 54321);
       }
    } 
 };
