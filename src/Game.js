@@ -259,7 +259,7 @@ Game.prototype.talkto= function(room, response){
     if(room[response]['actions']['talk']) {
       console.log(room[response]['actions']['talk']);
     } else {
-      console.log('${response} cannot be inspected.');
+      console.log(${response} 'cannot be inspected.');
     }
   }
 };
