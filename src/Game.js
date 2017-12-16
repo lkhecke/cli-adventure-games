@@ -256,8 +256,8 @@ Game.prototype.talkto= function(room, response){
   if(!room[response]) {
     console.log(`There is no ${response} to talk to.`);
   } else {
-    if(room[response]['actions']['talk']) {
-      console.log(room[response]['actions']['talk']);
+    if(room[response]['actions']['talkto']) {
+      console.log(room[response]['actions']['talkto']);
     } else {
       console.log('You cannot talk to that person.');
     }
