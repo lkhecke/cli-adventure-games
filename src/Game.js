@@ -272,7 +272,7 @@ Game.prototype.offer= function(room, response){
   } else if(room[response]['actions']['offer']) {
       console.log(room[response]['actions']['offer']);
       if(room.alias == 'Desert Dome') {
-        console.log('SUPPLY CLOSET CODE: 12345, ????: 54321);
+        console.log('SUPPLY CLOSET CODE: 12345, ? ? ?: 54321')
       }
    } 
 };
