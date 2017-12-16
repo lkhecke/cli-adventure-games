@@ -69,7 +69,7 @@
       "enemies": {
         "zookeeper": {
            "actions": {
-               "talk": "Oh heavens! I can't believe the cub escaped! What a terrible day. I lost my pocketbook and now this?!"
+               "talkto": "Oh heavens! I can't believe the cub escaped! What a terrible day. I lost my pocketbook and now this?!"
            }
          }
        }
@@ -117,7 +117,7 @@
       "enemies": {
          "curator": {
             "actions": {
-                "talk": "How's it going?... Missing panda? Woah, man... Let me know if you need anything."
+                "talkto": "How's it going?... Missing panda? Woah, man... Let me know if you need anything."
             }
           }
         }
@@ -181,7 +181,7 @@
       "enemies": {
           "volunteer": {
               "actions": {
-                "talk": "Hello, there!... My goodness! A missing panda?... I think I heard some loud noises in the Rainforest Room."
+                "talkto": "Hello, there!... My goodness! A missing panda?... I think I heard some loud noises in the Rainforest Room."
                 }
             }    
         }
@@ -206,8 +206,7 @@
         }, 
         "closet": {
             "actions": {
-                "inspect": "Its locked. I wonder where to find the passcode is...",
-                "unlock": "You unlocked the supply closet. Inside you find a ladder and a net."
+                "inspect": "Its locked. I wonder where to find the passcode is..."
             }
         },
         "ladder": {
@@ -259,8 +258,7 @@
       "objects": {
         "box": {
             "actions": {
-                "inspect": "It appears to be locked.",
-                "unlock": "You unlock the utilities box. You lower the mist level and spot the panda! Hooray!"
+                "inspect": "It appears to be locked."
             }
         } 
     },
