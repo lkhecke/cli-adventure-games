@@ -247,7 +247,7 @@ Game.prototype.inspect = function(room, response){
     if(room[response]['actions']['inspect']) {
       console.log(room[response]['actions']['inspect']);
     } else {
-      console.log('${response} cannot be inspected.');
+      console.log('You cannot inspect ${response}.');
     }
   }
 };
@@ -259,7 +259,7 @@ Game.prototype.talkto= function(room, response){
     if(room[response]['actions']['talk']) {
       console.log(room[response]['actions']['talk']);
     } else {
-      console.log(${response} 'cannot be inspected.');
+      console.log('You cannot talk to ${response}.');
     }
   }
 };
