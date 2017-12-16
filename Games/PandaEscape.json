@@ -150,7 +150,7 @@
         "west": "room11"
       },
       "objects": {
-        "binocular": {
+        "binoculars": {
           "actions": {
             "inspect": "Someone must have dropped these here."
           }
